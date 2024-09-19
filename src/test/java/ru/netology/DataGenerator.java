@@ -26,6 +26,12 @@ public class DataGenerator {
         Faker faker = new Faker(new Locale(local));
         return faker.phoneNumber().phoneNumber();
     }
+
+    public static String randomPhone(String local) {
+        Faker faker = new Faker(new Locale(local));
+        return faker.numerify("######");
+    }
+
     public static class Registration {
         private Registration() {
         }
